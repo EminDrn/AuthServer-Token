@@ -11,8 +11,8 @@ namespace AuthServer.Core.Services
     public interface IAuthenticationService
     {
         Task<Response<TokenDto>> CreateTokenAsync(LoginDto loginDto);
-        Task<Response<TokenDto>> UpdateTokenByRefreshToken(string refreshToken);
+        Task<Response<TokenDto>> CreateTokenByRefreshToken(string refreshToken);
         Task<Response<NoDataDto>> RevokeRefreshToken(string refreshToken);  //refresh token çalındığında lazım olabilir
-        Task<Response<ClientTokenDto>> CreateTokenByClient(ClientLoginDto clientLoginDto);
+        Response<ClientTokenDto> CreateTokenByClient(ClientLoginDto clientLoginDto);
     }
 }
