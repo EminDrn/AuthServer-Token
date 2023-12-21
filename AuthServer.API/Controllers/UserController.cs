@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 
 namespace AuthServer.API.Controllers
 {
-    [Route("api/[controller]/[Action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UserController : CustomBaseController
     {
